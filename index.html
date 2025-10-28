@@ -11,6 +11,7 @@
   <meta property="og:title" content="Dr. Souvick Ghosh" />
   <meta property="og:description" content="Trustworthy AI • Conversational Systems • HCI" />
   <meta property="og:type" content="website" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to main content</a>
@@ -20,7 +21,8 @@
       <div class="brand">
         <span class="avatar" aria-hidden="true">SG</span>
         <div class="titles">
-          <h1 class="name">Dr. Souvick Ghosh</h1>
+          <!-- Site name is no longer an H1; main page H1 is in the hero below -->
+          <p class="name">Dr. Souvick Ghosh</p>
           <p class="tagline">Trustworthy AI • Conversational Systems • HCI</p>
         </div>
       </div>
@@ -38,7 +40,7 @@
 
   <main id="content" class="container" tabindex="-1">
     <section class="hero" aria-labelledby="hero-heading">
-      <h2 id="hero-heading" class="hero-title">Bridging sociotechnical divides for <em>community well-being</em> and <em>fair decision-making</em>.</h2>
+      <h1 id="hero-heading" class="hero-title">Bridging sociotechnical divides for <em>community well-being</em> and <em>fair decision-making</em>.</h1>
       <p class="hero-text">
         I study automated decision-making, conversational systems, and ethical, human-centered AI.
       </p>
@@ -50,7 +52,7 @@
     </section>
 
     <section id="about" class="card" aria-labelledby="about-heading">
-      <h3 id="about-heading">About (Summary)</h3>
+      <h2 id="about-heading">About (Summary)</h2>
       <p>
         I am a faculty member working at the intersection of information, data, and society. My work focuses on
         <strong>trustworthy AI</strong>, <strong>conversational systems</strong>, and <strong>human-computer interaction</strong>.
@@ -64,7 +66,7 @@
     </section>
 
     <section id="publications" class="card" aria-labelledby="pubs-heading">
-      <h3 id="pubs-heading">Selected Publications</h3>
+      <h2 id="pubs-heading">Selected Publications</h2>
       <p class="muted">Replace placeholders with real citations and links.</p>
       <ol class="pubs">
         <li>
@@ -81,7 +83,7 @@
     </section>
 
     <section id="talks" class="card" aria-labelledby="talks-heading">
-      <h3 id="talks-heading">Talks</h3>
+      <h2 id="talks-heading">Talks</h2>
       <ul class="list">
         <li><strong>Bridging Sociotechnical Divides:</strong> Trustworthy AI for Community Well-Being and Fair Decision-Making — <em>University Scholar Series</em>, Nov 6, 2024.</li>
         <li><strong>SIG Social Media Workshop:</strong> Session moderator, “Social Media,” Oct 27, 2025.</li>
@@ -89,7 +91,7 @@
     </section>
 
     <section id="teaching" class="card" aria-labelledby="teaching-heading">
-      <h3 id="teaching-heading">Teaching &amp; Mentorship</h3>
+      <h2 id="teaching-heading">Teaching &amp; Mentorship</h2>
       <ul class="list">
         <li><strong>AI Basics (AI 101):</strong> Fundamentals for working professionals.</li>
         <li><strong>Information Retrieval System Design:</strong> Ethics-forward, tool-based approach.</li>
@@ -97,7 +99,7 @@
     </section>
 
     <section id="contact" class="card" aria-labelledby="contact-heading">
-      <h3 id="contact-heading">Contact</h3>
+      <h2 id="contact-heading">Contact</h2>
       <ul class="contact-list">
         <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
         <li>LinkedIn: <a href="#" rel="me nofollow">linkedin.com/in/your-handle</a></li>
@@ -112,17 +114,5 @@
       <p>© <span id="year"></span> Souvick Ghosh • All rights reserved</p>
     </div>
   </footer>
-
-  <script>
-    (function(){ try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(_){} })();
-    (function () {
-      var main = document.getElementById('content');
-      var skip = document.querySelector('.skip-link');
-      if (!main || !skip) return;
-      skip.addEventListener('click', function(){
-        setTimeout(function(){ try { main.focus(); } catch(_){} }, 0);
-      });
-    })();
-  </script>
 </body>
 </html>
