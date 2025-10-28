@@ -11,6 +11,7 @@
   <meta property="og:title" content="About — Dr. Souvick Ghosh" />
   <meta property="og:description" content="Background, research interests, teaching, and community work." />
   <meta property="og:type" content="website" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to main content</a>
@@ -20,7 +21,7 @@
       <div class="brand">
         <span class="avatar" aria-hidden="true">SG</span>
         <div class="titles">
-          <h1 class="name">Dr. Souvick Ghosh</h1>
+          <p class="name">Dr. Souvick Ghosh</p>
           <p class="tagline">Trustworthy AI • Conversational Systems • HCI</p>
         </div>
       </div>
@@ -38,12 +39,12 @@
 
   <main id="content" class="container" tabindex="-1">
     <section class="hero" aria-labelledby="about-hero">
-      <h2 id="about-hero" class="hero-title">About</h2>
+      <h1 id="about-hero" class="hero-title">About</h1>
       <p class="hero-text">Background, research focus, and community work.</p>
     </section>
 
     <section class="card" aria-labelledby="bio-heading">
-      <h3 id="bio-heading">Bio</h3>
+      <h2 id="bio-heading">Bio</h2>
       <p>
         I work at the intersection of information, data, and society, focusing on
         <strong>trustworthy AI</strong>, <strong>conversational systems</strong>, and <strong>human-computer interaction</strong>.
@@ -56,7 +57,7 @@
     </section>
 
     <section class="card" aria-labelledby="interests-heading">
-      <h3 id="interests-heading">Research Interests</h3>
+      <h2 id="interests-heading">Research Interests</h2>
       <ul class="list">
         <li>Bidirectional nature of bias in LLMs and methods for mitigation</li>
         <li>Conversational IR and explainable, dialog-centric retrieval</li>
@@ -70,7 +71,7 @@
     </section>
 
     <section class="card" aria-labelledby="teaching-heading">
-      <h3 id="teaching-heading">Teaching & Mentorship</h3>
+      <h2 id="teaching-heading">Teaching & Mentorship</h2>
       <ul class="list">
         <li><strong>AI Basics (AI 101):</strong> Fundamentals for working professionals; minimal programming required.</li>
         <li><strong>Information Retrieval System Design:</strong> Ethics-forward, tool-based approach.</li>
@@ -78,7 +79,7 @@
     </section>
 
     <section class="card" aria-labelledby="contact-ref">
-      <h3 id="contact-ref">Get in Touch</h3>
+      <h2 id="contact-ref">Get in Touch</h2>
       <p>Prefer email or your favorite network—see the <a href="index.html#contact">Contact section</a> on the home page.</p>
     </section>
   </main>
@@ -88,17 +89,5 @@
       <p>© <span id="year"></span> Souvick Ghosh • All rights reserved</p>
     </div>
   </footer>
-
-  <script>
-    (function(){ try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(_){} })();
-    (function () {
-      var main = document.getElementById('content');
-      var skip = document.querySelector('.skip-link');
-      if (!main || !skip) return;
-      skip.addEventListener('click', function(){
-        setTimeout(function(){ try { main.focus(); } catch(_){} }, 0);
-      });
-    })();
-  </script>
 </body>
 </html>
