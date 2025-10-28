@@ -1,7 +1,8 @@
 /* Accessible, mobile-first shared styles for all pages
-   Updates in this pass:
-   - Light theme focus color -> --focus: #ff5a00 (>= 3:1 vs white for Focus Appearance)
-   - Dark theme primary button -> --btn: #2563eb (white text >= 4.5:1)
+   SEO support: keeps headings readable, links underlined, and avoids CLS with stable spacing.
+   A11y: visible focus, high contrast tokens (light/dark), reduced motion, large touch targets.
+   Palette tags:
+   Frontend: #FFE0B2, Backend: #C8E6C9, Database: #BBDEFB
 */
 
 :root{
@@ -24,19 +25,18 @@
 
 @media (prefers-color-scheme: dark){
   :root{
-    /* DARK THEME — AA contrast tokens */
     --bg:#0b1020;
     --fg:#f2f5f9;
     --muted:#c6cbd4;
     --card:#111a2b;
     --border:#243044;
-    --link:#80b3ff;       /* high contrast vs dark bg */
+    --link:#80b3ff;
     --btn:#2563eb;        /* white text ≥ 4.5:1 */
     --btn-ghost:#f2f5f9;
     --chip-frontend:#5a4633;
     --chip-backend:#2d3b33;
     --chip-database:#23344a;
-    --focus:#ffd166;      /* high contrast vs dark bg */
+    --focus:#ffd166;
     --shadow:none;
     color-scheme: dark;
   }
@@ -63,7 +63,7 @@ body{
   text-rendering:optimizeLegibility;
 }
 
-/* Always underline links */
+/* Always underline links (SEO + a11y: no color-only cues) */
 a{
   color:var(--link);
   text-decoration: underline;
@@ -148,7 +148,7 @@ a:hover, a:focus-visible{
   margin:18px 0;
   box-shadow:var(--shadow);
 }
-.card h2, .card h3{margin:0 0 8px}
+.card h1,.card h2,.card h3{margin:0 0 8px}
 
 .list{padding-left:20px}
 .list li{margin:.35rem 0}
