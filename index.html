@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Souvick Ghosh — Personal Website</title>
+  <meta name="description" content="Personal website of Dr. Souvick Ghosh — Trustworthy AI, Conversational Systems, HCI." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' ry='12' fill='%23BBDEFB'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial' font-size='36' fill='%230B1020'%3ESG%3C/text%3E%3C/svg%3E" />
+  <meta property="og:title" content="Dr. Souvick Ghosh" />
+  <meta property="og:description" content="Trustworthy AI • Conversational Systems • HCI" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <span class="avatar" aria-hidden="true">SG</span>
+        <div class="titles">
+          <h1 class="name">Dr. Souvick Ghosh</h1>
+          <p class="tagline">Trustworthy AI • Conversational Systems • HCI</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <section class="hero">
+      <h2 class="hero-title">Bridging sociotechnical divides for <em>community well-being</em> and <em>fair decision-making</em>.</h2>
+      <p class="hero-text">
+        I study automated decision-making, conversational systems, and ethical, human-centered AI.
+      </p>
+      <div class="hero-actions">
+        <!-- Replace docs/cv.pdf with your actual CV path or remove this button -->
+        <a class="btn primary" href="docs/cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About</h3>
+      <p>
+        I am a faculty member working at the intersection of information, data, and society. My work focuses on
+        <strong>trustworthy AI</strong>, <strong>conversational systems</strong>, and <strong>human-computer interaction</strong>,
+        with an emphasis on ethical governance and equitable outcomes.
+      </p>
+      <ul class="chips" aria-label="Interests">
+        <li class="chip chip-frontend">Ethical AI</li>
+        <li class="chip chip-backend">Conversational Agents</li>
+        <li class="chip chip-database">Human-AI Interaction</li>
+      </ul>
+    </section>
+
+    <section id="research" class="card">
+      <h3>Research</h3>
+      <p>
+        Current interests include the bidirectional nature of bias in LLMs, trustworthy conversational systems,
+        and practical, human-centered evaluation methods.
+      </p>
+      <ul class="list">
+        <li><strong>Bias & Evaluation:</strong> Methods to surface and mitigate reciprocal bias in large language models.</li>
+        <li><strong>Conversational IR:</strong> Designing explainable, dialog-centric retrieval experiences.</li>
+        <li><strong>Community Impact:</strong> Applying AI responsibly in libraries, archives, and public services.</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="card">
+      <h3>Selected Publications</h3>
+      <p class="muted">Replace the placeholders below with real citations. Keep the simple format—no special tools needed.</p>
+      <ol class="pubs">
+        <li>
+          <span class="pub-title">“Title of Paper One.”</span>
+          <span class="pub-venue">Conference/Journal, Year.</span>
+          <a class="pub-link" href="#" aria-label="Paper One link">PDF</a>
+        </li>
+        <li>
+          <span class="pub-title">“Title of Paper Two.”</span>
+          <span class="pub-venue">Conference/Journal, Year.</span>
+          <a class="pub-link" href="#" aria-label="Paper Two link">PDF</a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="talks" class="card">
+      <h3>Talks</h3>
+      <ul class="list">
+        <li><strong>Bridging Sociotechnical Divides:</strong> Trustworthy AI for Community Well-Being and Fair Decision-Making — <em>University Scholar Series</em>, Nov 6, 2024.</li>
+        <li><strong>SIG Social Media Workshop:</strong> Session moderator, “Social Media,” Oct 27, 2025.</li>
+      </ul>
+    </section>
+
+    <section id="teaching" class="card">
+      <h3>Teaching & Mentorship</h3>
+      <ul class="list">
+        <li><strong>AI Basics (AI 101):</strong> Fundamentals of AI for working professionals.</li>
+        <li><strong>Information Retrieval System Design:</strong> Ethics-forward, tool-based approach.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <p>Fastest way: email. Social links are optional—use what you prefer.</p>
+      <ul class="contact-list">
+        <!-- Replace the values after mailto: and # with your real links -->
+        <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+        <li>LinkedIn: <a href="#" rel="nofollow">linkedin.com/in/your-handle</a></li>
+        <li>Google Scholar: <a href="#" rel="nofollow">scholar.google.com/…</a></li>
+        <li>ORCID: <a href="#" rel="nofollow">orcid.org/…</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Souvick Ghosh • All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer (optional; safe even if JS is blocked)
+    (function(){ try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(_){} })();
+  </script>
+</body>
+</html>
