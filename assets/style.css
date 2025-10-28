@@ -1,0 +1,112 @@
+/* Minimal, accessible, print-friendly styles
+   Accent chips use your preferred palette:
+   Frontend: #FFE0B2, Backend: #C8E6C9, Database: #BBDEFB
+*/
+
+:root{
+  --bg:#ffffff;
+  --fg:#0b1020;
+  --muted:#4b5563;
+  --card:#f7f8fb;
+  --border:#e5e7eb;
+  --link:#0f62fe;
+  --btn:#0f62fe;
+  --btn-ghost:#0b1020;
+  --chip-frontend:#FFE0B2; /* peach */
+  --chip-backend:#C8E6C9;  /* light green */
+  --chip-database:#BBDEFB; /* light blue */
+  --shadow:0 8px 24px rgba(2,8,23,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--fg);
+  background:var(--bg);
+  font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+
+.skip-link{
+  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden
+}
+.skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;padding:8px 10px;border-radius:8px;box-shadow:var(--shadow)}
+
+.site-header{
+  border-bottom:1px solid var(--border);
+  background:#fff;
+  position:sticky;top:0;z-index:2;
+}
+.brand{display:flex;gap:16px;align-items:center}
+.avatar{
+  width:56px;height:56px;border-radius:50%;
+  display:grid;place-items:center;
+  font-weight:700;color:#0b1020;background:var(--chip-database);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+}
+.titles .name{margin:0;font-size:1.4rem;line-height:1.25}
+.titles .tagline{margin:4px 0 0;color:var(--muted)}
+
+.nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.nav a{padding:8px 10px;border-radius:10px}
+.nav a:hover{background:var(--card);text-decoration:none}
+
+.hero{padding:28px 0 8px}
+.hero-title{font-size:clamp(1.4rem,2.8vw,2.1rem);line-height:1.3;margin:.2rem 0 .6rem}
+.hero-text{color:var(--muted);margin:.2rem 0 1rem}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:10px 14px;border-radius:12px;font-weight:600;transition:transform .04s ease;
+  border:1px solid transparent
+}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--btn);color:#fff}
+.btn.ghost{border-color:var(--border);color:var(--btn-ghost);background:#fff}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  margin:18px 0;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 8px}
+.list{padding-left:20px}
+.list li{margin:.3rem 0}
+.pubs{padding-left:20px}
+.pubs li{margin:.5rem 0}
+.pub-title{display:block;font-weight:600}
+.pub-venue{display:block;color:var(--muted)}
+.pub-link{display:inline-block;margin-top:4px}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.chip{padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.06);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.chip-frontend{background:var(--chip-frontend)}
+.chip-backend{background:var(--chip-backend)}
+.chip-database{background:var(--chip-database)}
+
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{margin:.3rem 0}
+
+.site-footer{
+  border-top:1px solid var(--border);margin-top:32px;background:#fff
+}
+.site-footer p{margin:0;padding:18px;color:var(--muted);text-align:center}
+
+@media (max-width:720px){
+  .nav{justify-content:flex-start;margin-top:10px}
+  .titles .name{font-size:1.25rem}
+}
+
+/* Print tweaks */
+@media print{
+  .site-header,.site-footer,.btn,.chips{display:none}
+  .card{box-shadow:none}
+  a{color:#000;text-decoration:underline}
+}
