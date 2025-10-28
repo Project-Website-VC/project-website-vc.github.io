@@ -1,12 +1,7 @@
 /* Accessible, mobile-first shared styles for all pages
-   - Visible focus via :focus-visible
-   - Underlined links (no color-only cues)
-   - WCAG AA color contrast (light & dark)
-   - Large touch targets
-   - Reduced motion support
-   - System fonts, responsive type
-   Accent chips per your palette:
-   Frontend: #FFE0B2, Backend: #C8E6C9, Database: #BBDEFB
+   Updates in this pass:
+   - Light theme focus color -> --focus: #ff5a00 (>= 3:1 vs white for Focus Appearance)
+   - Dark theme primary button -> --btn: #2563eb (white text >= 4.5:1)
 */
 
 :root{
@@ -22,7 +17,7 @@
   --chip-frontend:#FFE0B2;
   --chip-backend:#C8E6C9;
   --chip-database:#BBDEFB;
-  --focus:#ff7a00;        /* High-visibility focus indicator */
+  --focus:#ff5a00;        /* >= 3:1 vs white for focus ring */
   --shadow:0 8px 24px rgba(2,8,23,.08);
   color-scheme: light;
 }
@@ -35,13 +30,13 @@
     --muted:#c6cbd4;
     --card:#111a2b;
     --border:#243044;
-    --link:#80b3ff;
-    --btn:#3b82f6;
+    --link:#80b3ff;       /* high contrast vs dark bg */
+    --btn:#2563eb;        /* white text ≥ 4.5:1 */
     --btn-ghost:#f2f5f9;
     --chip-frontend:#5a4633;
     --chip-backend:#2d3b33;
     --chip-database:#23344a;
-    --focus:#ffd166;
+    --focus:#ffd166;      /* high contrast vs dark bg */
     --shadow:none;
     color-scheme: dark;
   }
@@ -153,7 +148,7 @@ a:hover, a:focus-visible{
   margin:18px 0;
   box-shadow:var(--shadow);
 }
-.card h3{margin:0 0 8px}
+.card h2, .card h3{margin:0 0 8px}
 
 .list{padding-left:20px}
 .list li{margin:.35rem 0}
@@ -223,14 +218,13 @@ a:hover, a:focus-visible{
 }
 .collapsible summary::-webkit-details-marker{display:none}
 .collapsible summary::marker{content:""}
-/* Caret icon (text-based for forced-colors compatibility) */
 .collapsible summary .caret::before{
-  content:"▸"; /* closed */
+  content:"▸";
   display:inline-block;
   width:1em;
   text-align:center;
 }
-.collapsible[open] summary .caret::before{content:"▾"} /* open */
+.collapsible[open] summary .caret::before{content:"▾"}
 .collapsible-content{
   padding:0 14px 14px 14px;
 }
