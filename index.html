@@ -3,14 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Souvick Ghosh — Personal Website</title>
-  <meta name="description" content="Personal website of Dr. Souvick Ghosh — Trustworthy AI, Conversational Systems, HCI." />
+  <title>Dr. Souvick Ghosh — Trustworthy AI, Conversational Systems, HCI</title>
+  <meta name="description" content="Official site of Dr. Souvick Ghosh. Research in trustworthy AI, conversational systems, HCI, and equitable decision-making. Publications, talks, teaching, and contact." />
+  <meta name="author" content="Dr. Souvick Ghosh" />
   <meta name="theme-color" content="#0b1020" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://YOUR_SITE_URL/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Souvick Ghosh — Trustworthy AI, Conversational Systems, HCI" />
+  <meta property="og:description" content="Research in trustworthy AI, conversational systems, HCI, and equitable decision-making." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR_SITE_URL/" />
+  <meta property="og:site_name" content="Dr. Souvick Ghosh" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dr. Souvick Ghosh — Trustworthy AI, Conversational Systems, HCI" />
+  <meta name="twitter:description" content="Research in trustworthy AI, conversational systems, HCI, and equitable decision-making." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' ry='12' fill='%23BBDEFB'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial' font-size='36' fill='%230B1020'%3ESG%3C/text%3E%3C/svg%3E" />
-  <meta property="og:title" content="Dr. Souvick Ghosh" />
-  <meta property="og:description" content="Trustworthy AI • Conversational Systems • HCI" />
-  <meta property="og:type" content="website" />
+
+  <!-- JSON-LD (WebSite, Person, BreadcrumbList). Replace YOUR links. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Dr. Souvick Ghosh",
+        "url": "https://YOUR_SITE_URL/"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Souvick Ghosh",
+        "url": "https://YOUR_SITE_URL/",
+        "sameAs": [
+          "https://linkedin.com/in/your-handle",
+          "https://scholar.google.com/...",
+          "https://orcid.org/..."
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://YOUR_SITE_URL/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -21,7 +67,6 @@
       <div class="brand">
         <span class="avatar" aria-hidden="true">SG</span>
         <div class="titles">
-          <!-- Site name is no longer an H1; main page H1 is in the hero below -->
           <p class="name">Dr. Souvick Ghosh</p>
           <p class="tagline">Trustworthy AI • Conversational Systems • HCI</p>
         </div>
@@ -102,9 +147,9 @@
       <h2 id="contact-heading">Contact</h2>
       <ul class="contact-list">
         <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-        <li>LinkedIn: <a href="#" rel="me nofollow">linkedin.com/in/your-handle</a></li>
-        <li>Google Scholar: <a href="#" rel="nofollow">scholar.google.com/…</a></li>
-        <li>ORCID: <a href="#" rel="nofollow">orcid.org/…</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/your-handle" rel="me nofollow">linkedin.com/in/your-handle</a></li>
+        <li>Google Scholar: <a href="https://scholar.google.com/..." rel="nofollow">scholar.google.com/…</a></li>
+        <li>ORCID: <a href="https://orcid.org/..." rel="nofollow">orcid.org/…</a></li>
       </ul>
     </section>
   </main>
