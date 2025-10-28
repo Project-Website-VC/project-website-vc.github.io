@@ -198,3 +198,46 @@ a:hover, a:focus-visible{
   *{forced-color-adjust:auto}
   :focus-visible{outline: 2px solid Highlight; outline-offset: 2px}
 }
+
+/* =========================
+   Collapsible components
+   ========================= */
+.collapsible{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  margin:14px 0;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.collapsible[open]{border-color:var(--border)}
+.collapsible summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  font-weight:700;
+  user-select:none;
+}
+.collapsible summary::-webkit-details-marker{display:none}
+.collapsible summary::marker{content:""}
+/* Caret icon (text-based for forced-colors compatibility) */
+.collapsible summary .caret::before{
+  content:"▸"; /* closed */
+  display:inline-block;
+  width:1em;
+  text-align:center;
+}
+.collapsible[open] summary .caret::before{content:"▾"} /* open */
+.collapsible-content{
+  padding:0 14px 14px 14px;
+}
+
+/* Controls row (shown only when JS enables it) */
+.collapsible-controls{
+  display:flex;
+  gap:8px;
+  margin:8px 0 12px;
+}
